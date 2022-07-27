@@ -166,6 +166,8 @@
   width: 280px;
   height: 280px;
   border-radius: 50%;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
 }
 
 .about__card-copy {
@@ -292,6 +294,17 @@
   margin: 20px 0;
 }
 
+.works-article__image {
+  width: 246px;
+  height: 180px;
+}
+
+.works-article__image img {
+  width: 246px;
+  height: 180px;
+  border-radius: 10px;
+}
+
 .works-article__description-title a {
   text-decoration: none;
   color: black;
@@ -300,7 +313,8 @@
 }
 
 .works-article__description-coin {
-  margin: 20px 0 20px 0;
+  margin: 20px 0;
+  padding-top: 2.5px;
   display: inline-block;
   width: 67px;
   height: 24px;
