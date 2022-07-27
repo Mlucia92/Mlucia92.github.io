@@ -141,17 +141,10 @@
 
 .about__card {
   margin: 50px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  gap: 300px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -160,16 +153,22 @@
 .about__card-photo {
   width: 280px;
   height: 280px;
+  -ms-grid-column-align: start;
+      justify-self: start;
 }
 
 .about__card-photo img {
   width: 280px;
   height: 280px;
   border-radius: 50%;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
 }
 
 .about__card-copy {
   max-width: 330px;
+  -ms-grid-column-align: end;
+      justify-self: end;
   text-align: center;
   line-height: 24px;
   font-family: "Zilla Slab", serif;
@@ -178,6 +177,7 @@
 .skills {
   max-width: 1400px;
   margin: 64px auto;
+  padding: 10px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -240,7 +240,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 78px;
+  gap: 32px;
 }
 
 .featured-works__card figure img {
@@ -282,6 +282,7 @@
   height: -moz-fit-content;
   height: fit-content;
   margin: 80px auto;
+  padding: 0 10px;
 }
 
 .works-article {
@@ -292,6 +293,17 @@
   margin: 20px 0;
 }
 
+.works-article__image {
+  width: 246px;
+  height: 180px;
+}
+
+.works-article__image img {
+  width: 246px;
+  height: 180px;
+  border-radius: 10px;
+}
+
 .works-article__description-title a {
   text-decoration: none;
   color: black;
@@ -300,7 +312,8 @@
 }
 
 .works-article__description-coin {
-  margin: 20px 0 20px 0;
+  margin: 20px 0;
+  padding-top: 2.5px;
   display: inline-block;
   width: 67px;
   height: 24px;
@@ -343,5 +356,83 @@
 
 .footer__list-single {
   list-style: none;
+}
+
+@media (max-width: 1439px) {
+  .featured-works__card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 920px) {
+  .hero__title {
+    font-size: 75px;
+  }
+  .hero__link {
+    display: none;
+  }
+  .skills {
+    -ms-grid-columns: none;
+        grid-template-columns: none;
+  }
+  .skills__container {
+    margin-top: 64px;
+  }
+  .skills__container article {
+    width: 330px;
+    height: 280px;
+  }
+}
+
+@media (max-width: 744px) {
+  .hero__title {
+    font-size: 50px;
+  }
+  .hero__button {
+    width: 200px;
+    height: 50px;
+    font-size: 32px;
+  }
+  .about__card {
+    -ms-grid-columns: none;
+        grid-template-columns: none;
+    gap: 32px;
+  }
+  .about__card-photo {
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  .about__card-copy {
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  .featured-works__card figure img {
+    width: 330px;
+    height: 230px;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .header__left {
+    margin-left: 10px;
+    text-align: start;
+  }
+  .header__right {
+    margin-right: 10px;
+  }
+  .works-article {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 /*# sourceMappingURL=main.css.map */

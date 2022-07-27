@@ -115,25 +115,26 @@ $secondary-font: 'Zilla Slab', serif;
 
     &__card {
         margin: 50px 0;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        gap: 300px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         align-items: center;
 
         &-photo {
             width: 280px;
             height: 280px;
+            justify-self: start;
             
             img {
                 width: 280px;
                 height: 280px;
                 border-radius: 50%;
+                transform: scaleX(-1);
             }
         }
 
         &-copy {
             max-width: 330px;
+            justify-self: end;
             text-align: center;
             line-height: 24px;
             font-family: $secondary-font;
@@ -147,6 +148,7 @@ $secondary-font: 'Zilla Slab', serif;
 .skills {
     max-width: 1400px;
     margin: 64px auto;
+    padding: 10px;
     height: fit-content;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -193,7 +195,7 @@ $secondary-font: 'Zilla Slab', serif;
 
     &__card {
         display: flex;
-        gap: 78px;
+        gap: 32px;
 
         figure {
             img {
@@ -228,12 +230,23 @@ $secondary-font: 'Zilla Slab', serif;
     max-width: 874px;
     height: fit-content;
     margin: 80px auto;
+    padding: 0 10px;
 }
 
 .works-article {
     display: flex;
     gap: 20px;
     margin: 20px 0;
+
+    &__image {
+        width: 246px;
+        height: 180px;
+        img {
+            width: 246px;
+            height: 180px;
+            border-radius: 10px;
+        }
+    }
     &__description {
         &-title a {
             text-decoration: none;
@@ -243,7 +256,8 @@ $secondary-font: 'Zilla Slab', serif;
         }
 
         &-coin {
-            margin: 20px 0 20px 0;
+            margin: 20px 0;
+            padding-top: 2.5px;
             display: inline-block;
             width: 67px;
             height: 24px;
@@ -286,4 +300,100 @@ $secondary-font: 'Zilla Slab', serif;
 
     }
 
+}
+
+@media (max-width: 1439px) {
+    .featured-works {
+        &__card {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+@media (max-width: 920px) {
+    .hero {
+        &__title {   
+            font-size: 75px;
+                
+        }
+        
+       &__link {
+            display: none;
+       }
+    }
+
+    .skills {
+        grid-template-columns: none;
+    
+        &__container {
+            margin-top: 64px;
+            article {
+                width: 330px;
+                height: 280px;
+            }
+        }
+              
+    }
+}
+
+@media (max-width: 744px){
+    .hero {
+        
+        &__title {   
+            font-size: 50px;     
+        }
+        
+        &__button {
+            width: 200px;
+            height: 50px;
+            font-size: 32px;
+        }
+    }
+
+    .about {
+        &__card {
+            grid-template-columns: none;
+            gap: 32px;
+
+            &-photo {
+                justify-self: center;
+            }
+    
+            &-copy {
+                justify-self: center;
+            }
+        }
+    }
+
+    .featured-works {
+        &__card {
+            figure {
+                img {
+                    width: 330px;
+                    height: 230px;
+                    object-fit: contain;
+                }
+            }  
+        }
+    }
+
+    .header {
+
+        &__left {
+            margin-left: 10px;
+            text-align: start;
+        }
+
+        &__right {
+            margin-right: 10px;
+        }
+
+
+    }
+
+    .works-article {
+        flex-direction: column;
+        align-items: center;
+    }
 }
