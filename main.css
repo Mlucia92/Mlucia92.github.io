@@ -206,8 +206,8 @@
 .skills__container article {
   width: 626px;
   height: 130px;
-  background-color: #c94d63;
-  opacity: 30%;
+  background-color: black;
+  opacity: 15%;
   border-radius: 10px;
 }
 
@@ -258,6 +258,12 @@
   height: fit-content;
 }
 
+.title--works {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-top: 132px;
+}
+
 .title__name {
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -268,6 +274,54 @@
   font-size: 64px;
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
+}
+
+.works-container {
+  max-width: 874px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 80px auto;
+}
+
+.works-article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.works-article__description-title a {
+  text-decoration: none;
+  color: black;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.works-article__description-coin {
+  margin: 20px 0 20px 0;
+  display: inline-block;
+  width: 67px;
+  height: 24px;
+  color: whitesmoke;
+  background-color: black;
+  font-size: 18px;
+  border-radius: 50px;
+  text-align: center;
+}
+
+.works-article__description-type {
+  padding-left: 20px;
+  color: #c94d63;
+  font-size: 18px;
+}
+
+.works-article__description-text {
+  font-family: "Zilla Slab", serif;
+  font-size: 16px;
+  color: black;
+  line-height: 24px;
 }
 
 .footer {
