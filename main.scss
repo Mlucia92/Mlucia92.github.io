@@ -245,9 +245,12 @@ $secondary-font: 'Zilla Slab', serif;
             width: 246px;
             height: 180px;
             border-radius: 10px;
+            object-fit: contain;
         }
     }
+
     &__description {
+        font-family: $primary-font;
         &-title a {
             text-decoration: none;
             color: $primary-font-color;
@@ -395,5 +398,11 @@ $secondary-font: 'Zilla Slab', serif;
     .works-article {
         flex-direction: column;
         align-items: center;
+
+        &__description {
+            text-align: center;
+        }
+
+
     }
 }
